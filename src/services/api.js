@@ -1,6 +1,8 @@
+const API_URL = import.meta.env.VITE_API_URL || 'https://backendcearq-2.onrender.com';
+
 export async function getCollection(name) {
     try {
-      const res = await fetch(`https://backendcearq-2.onrender.com/api/${name}`);
+      const res = await fetch(`${API_URL}/api/${name}`);
       if (!res.ok) throw new Error(`Error al obtener ${name}`);
       return await res.json();
     } catch (error) {
@@ -19,7 +21,7 @@ export async function uploadItem(collection, file, data) {
         formData.append(key, data[key]);
         });
 
-        const res = await fetch(`https://backendcearq-2.onrender.com/api/${collection}`, {
+        const res = await fetch(`${API_URL}/api/${collection}`, {
         method: "POST",
         body: formData
         });
@@ -35,7 +37,7 @@ export async function uploadItem(collection, file, data) {
   
 export async function deleteItem(collection, id) {
   try {
-    const res = await fetch(`https://backendcearq-2.onrender.com/${collection}/${id}`, {
+    const res = await fetch(`${API_URL}/api/${collection}/${id}`, {
       method: "DELETE",
     });
 
@@ -43,7 +45,7 @@ export async function deleteItem(collection, id) {
 
     const data = await res.json();
 
-    console.log("🗑️", data.message); // ← log en consola
+    console.log("🗑️", data.message);
     return true;
 
   } catch (error) {

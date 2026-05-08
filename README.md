@@ -1,30 +1,51 @@
-# React + TypeScript + Vite
+# CEARQ – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend de la página web de **CEARQ**, un estudio de arquitectura y diseño de interiores. Construido con React + Vite.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 18** con JSX
+- **Vite 5** como bundler
+- **React Router DOM** para navegación
+- **CSS Modules** para estilos
+- **Cloudinary** para imágenes (a través del backend)
 
-## Expanding the ESLint configuration
+## 📁 Estructura del Proyecto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+src/
+├── assets/          # Imágenes y fuentes
+├── components/      # Componentes reutilizables
+├── services/        # Llamadas a la API (api.js)
+├── styles/          # CSS Modules por componente
+├── App.jsx          # Componente principal
+└── main.jsx         # Entry point
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 🚀 Instalación local
+
+```bash
+# Instalar dependencias
+npm install
+
+# Crear archivo .env con las variables necesarias
+cp .env.example .env
+
+# Iniciar en modo desarrollo
+npm run dev
+```
+
+## 🔐 Variables de Entorno
+
+| Variable | Descripción |
+|---|---|
+| `VITE_API_URL` | URL del backend (ej: `https://backendcearq-2.onrender.com`) |
+| `VITE_DASHBOARD_PASSWORD` | Contraseña de acceso al dashboard |
+
+## 🌐 Deploy
+
+- **Frontend**: Vercel (conectado a este repositorio)
+- **Backend**: Render → [backendcearq-2.onrender.com](https://backendcearq-2.onrender.com)
+- **Base de datos**: Supabase (PostgreSQL)
+- **Imágenes**: Cloudinary
+
