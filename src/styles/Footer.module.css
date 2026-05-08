@@ -1,0 +1,132 @@
+.footer {
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #ffffff;
+  }
+  .container-footer{
+    width: 80%;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px 0;
+  }
+  .numberphone, .email{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    color: #000;
+  }
+  .contact-email{
+    margin-left: 50px;
+  }
+  .contact-phone{
+    margin-left: 68px;
+  }
+  .icons{
+    height: auto;
+    width: auto;
+    display: flex;
+    gap: 6px;
+    margin-top: 40px;
+  }
+  .child2-footer{
+    line-height: 2;
+  }
+  .child2-footer, .child1-footer{
+    padding: 100px 0 0 0;
+    font-size: 20px;
+  }
+  .inicio{
+    display: flex;
+  }
+  .beggining{
+    margin: 0;
+    width: auto;
+    color: #000;
+    display: flex;
+    width: fit-content;
+  }
+  .a2{
+    color: #000;
+    margin-left: 16px;
+  }
+  .p-footer{
+    padding-top: 30px;
+    width: auto;
+  }
+  .networks{
+    height: 30px;
+    width: 30px;
+  }
+  .brand{
+    margin-left: 5px;
+  }
+  
+  @media (max-width: 1040px){
+    .container-footer{
+        width: 100%;
+    }
+    .child1-footer, .child2-footer{
+        padding-left: 80px;
+    }
+  }
+
+  @media (max-width: 865px){
+    .logo-footer{
+        width: 85%;
+    }
+    .child1-footer, .child2-footer{
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 730px){
+    footer{
+        height: 28rem;
+    }
+    .container-footer{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        height: 95%;
+    }
+}
+
+@media (max-width: 675px){
+    .child1-footer, .child2-footer{
+        padding-left: 10px;
+        font-size: 16px;
+        padding-top: 150px;
+    }
+  }
+
+  @media (max-width: 570px){
+    .container-footer{
+        display: block;
+    }
+    .child1-footer, .child2-footer{
+        padding-left: 50px;
+        padding-top: 80px;
+      }
+  }
+
+  @media (max-width: 480px){
+    .container-footer{
+        gap: 8px;
+        width: 100%;
+    }
+  }
+
+  @media (max-width: 387px){
+    .child1-footer, .child2-footer{
+        padding-left: 15px;
+    }
+  }
+
+  @media (max-width: 330px){
+    .child1-footer, .child2-footer{
+        padding-left: 5px;
+    }
+  }

@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "MiFuente";
+  background-color: #ffffff;
+}
+.title{
+    margin: 50px;
+    font-family: "MiFuente";
+    color: #000;
+    font-size: 32px;
+  }
+  .container-images-carrousel{
+    column-count: 3;
+    column-gap: 2rem;
+    width: 100%;
+    height: 100%;
+  }
+  .img-card, .container-images-carrousel {
+    width: 100%;
+    margin-bottom: 1rem;
+    break-inside: avoid;
+    overflow: hidden;
+  }
+  
+  .img-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s ease-in-out;
+    display: block;
+  }
+  
+  .img-card:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    width: 420px;
+    color: #000;
+    font-size: 16px;
+  }
+  
+  .preview {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin: 12px 0;
+    border-radius: 8px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    color: #ffffff;
+  }
+
+  .input{
+    all: unset;
+    padding: 16px;
+    color: #000;
+    background-color: rgb(228, 228, 228);
+    border-radius: 8px;
+    margin-top: 16px;
+  }
+
+  .confirmModal{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    width:320px;
+    text-align:center;
+    z-index:1000;
+  }
+  
+  .overlay{
+    position: fixed;
+    inset:0;
+    background: rgba(0,0,0,0.6);
+    z-index:999;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: #000;
+  }
+  
+  .actions{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+  }
+  
+  .cancelBtn{
+    background:#ccc;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+  }
+  
+  .deleteBtn{
+    background:#e53935;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+  }
+  
+  @media (max-width: 1040px){
+    .container-images-carrousel{
+      column-count: 2;
+      column-gap: 2rem;
+    }
+  }
+
+  @media (max-width: 795px){
+    .container-images-carrousel{
+      column-count: 1;
+    }
+    .img-card{
+      margin-bottom: 3rem;
+    }
+  }
+  @media (max-width: 570px){
+      .container-images-carrousel{
+        grid-template-columns: 1fr;
+      }
+  }
+  @media (max-width: 550px){
+    .img-card{
+      margin-bottom: 2rem;
+    }
+  }
+  @media (max-width: 367px){
+    .img-card{
+      margin-bottom: 1.3rem;
+    }
+  }
+  

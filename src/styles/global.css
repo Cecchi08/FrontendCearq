@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "MiFuente";
+    src: url("../assets/fonts/GFSDidot-Regular.ttf") format("truetype");
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "MiFuente";
+    background-color: #ffffff;
+  }
+  
+  /* clases manipuladas por JS */
+  .body-noscroll {
+    overflow: hidden;
+  }
+  
+  .section1-shadow {
+    box-shadow: inset 0 0 0 9999px rgba(0,0,0,0.4);
+  }
+
+  .a {
+    all: unset;
+    display: block;
+    width: fit-content;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  
+  .a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #4daf98;;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+  }
+  
+  .a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    color: #4daf98;
+  }
+  
+  .a:hover::after {
+    transform: scaleX(1);
+  }
+  
