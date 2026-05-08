@@ -1,5 +1,5 @@
 import styles from "../styles/Dashboard.module.css";
-import ImgNonAttached from "./imgNonAttached";
+import ImgNonAttached from "./ImgNonAttached";
 import BackendImage from "./BackendImage";
 import { useEffect, useState } from "react";
 import { getCollection, uploadItem, deleteItem } from "../services/api";
